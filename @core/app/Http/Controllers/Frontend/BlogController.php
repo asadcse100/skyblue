@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 use App\Models\Admin;
 use App\Models\Blog;
@@ -26,7 +26,7 @@ use function PHPUnit\Framework\isNull;
 class BlogController extends Controller
 {
 
-    private const BASE_PATH = 'blog::frontend.';
+    private const BASE_PATH = 'frontend.';
 
     public function blog_single($slug)
     {
