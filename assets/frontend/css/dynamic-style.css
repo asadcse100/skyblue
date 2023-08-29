@@ -1,0 +1,27 @@
+
+.buy-now-wrap {
+    position: fixed;
+    right: 0;
+    top: 40%
+}
+
+.buy-now-wrap ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.buy-now-wrap ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--main-color-one);
+    border-radius: 0;
+    color: #fff;
+    line-height: 40px
+}
+
+.buy-now-wrap ul li + li {
+    border-top: 1px solid rgba(0, 0, 0, .02)
+}
