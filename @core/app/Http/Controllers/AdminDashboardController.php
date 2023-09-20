@@ -31,6 +31,7 @@ class AdminDashboardController extends Controller
     public function adminIndex(){
 
         $all_blogs = Blog::count();
+        $publist_blogs = Blog::where('status', 'publish')->count();
         $total_admin = Admin::count();
         $total_user = User::count();
 
@@ -50,6 +51,7 @@ class AdminDashboardController extends Controller
 
         return view('backend.admin-home')->with([
             'blog_count' => $all_blogs,
+            'publist_blogs' => $publist_blogs,
             'total_admin' => $total_admin,
             'total_user' => $total_user,
             'all_poll' => $all_poll,

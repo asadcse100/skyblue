@@ -76,7 +76,6 @@ class LoginController extends Controller
         ]);
 
         if (Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password], $request->get('remember'))) {
-
             return response()->json([
                 'msg' => __('Login Success Redirecting'),
                 'type' => 'success',

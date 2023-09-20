@@ -21,6 +21,7 @@
            ['title' => 'Total Admin','value' => $total_admin, 'icon' => 'user-secret','data_url'=> $data_url['admin']],
            ['title' => 'Total User','value' => $total_user, 'icon' => 'user','data_url'=> $data_url['user']],
            ['title' => 'Total Blogs','value' => $blog_count, 'icon' => 'blog','data_url'=> $data_url['blog']],
+           ['title' => 'Published Blogs','value' => $publist_blogs, 'icon' => 'blog','data_url'=> $data_url['blog']],
            ['title' => 'Total Polls','value' => $all_poll, 'icon' => 'poll','data_url'=> $data_url['poll']],
            ['title' => 'Total Advertisement','value' => $total_advertisement, 'icon' => 'ad','data_url'=> $data_url['advertisement']],
            ['title' => 'Total Subscriber','value' => $total_subscriber, 'icon' => 'envelope-square','data_url'=> $data_url['subscriber']],
@@ -34,7 +35,7 @@
                 <div class="row">
 
                     @foreach ($statistics as $data)
-                        <div class="col-md-4 mt-5 mb-3">
+                        <div class="col-md-3 mt-5 mb-3">
                             <div class="card card-hover">
                                 <div class="dash-box text-white">
                                     <h1 class="dash-icon">
@@ -49,9 +50,13 @@
                             </div>
                         </div>
                     @endforeach
-                    
-                    
-                    <div class="col-lg-4">
+
+                </div>                
+            </div>            
+        </div>
+
+        <div class="row"> 
+        <div class="col-lg-3">
                         <div class="chart-wrapper margin-top-40">
                             <h2 class="chart-title small text-center">{{__("Site Device Views Last 30 Days")}}</h2>
                             <div>
@@ -59,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="chart-wrapper margin-top-40">
                             <h2 class="chart-title small text-center">{{__("Operating System Views Last 30 Days")}}</h2>
                             <div>
@@ -69,17 +74,15 @@
                     </div>
 
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="chart-wrapper margin-top-40">
                             <h2 class="chart-title small text-center">{{__("As Viewers Browser Last 30 Days")}}</h2>
                             <div>
                                 <canvas id="visited_browser_show"></canvas>
                             </div>
                         </div>
-                    </div>
-
-                    
-                    <div class="col-lg-6">
+                    </div>                      
+                <div class="col-lg-6">
                         <div class="chart-wrapper margin-top-40">
                             <h2 class="chart-title">{{__("Most viewed url in last 30 Days")}} {{date('Y')}}</h2>
                             <canvas id="visited_url_show"></canvas>
@@ -91,13 +94,7 @@
                             <canvas id="visited_url_show_two"></canvas>
                         </div>
                     </div>
-                    
-
                 </div>
-            </div>
-        </div>
-
-
     </div>
 @endsection
 
