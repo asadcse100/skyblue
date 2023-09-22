@@ -38,6 +38,7 @@ class AdminDashboardController extends Controller
         $all_poll = Poll::count();
         $total_advertisement = Advertisement::count();
         $total_subscriber = Newsletter::count();
+        $total_visitor = VisitorInfo::where('ip', '!=', '::1')->count();
 
 
         $data_url = [
@@ -58,6 +59,7 @@ class AdminDashboardController extends Controller
             'total_advertisement' => $total_advertisement,
             'total_subscriber' => $total_subscriber,
             'data_url'=> $data_url,
+            'total_visitor'=> $total_visitor,
         ]);
     }
 
@@ -193,10 +195,12 @@ class AdminDashboardController extends Controller
     }
 
     public function get_chart_data_device(Request $request){
+
         $all_data_by_device = VisitorInfo::select('device')
             ->whereDate('created_at', '>', Carbon::now()->subDays(30))
+            ->where('ip', '!=', '::1')
             ->get()
-            ->groupBy( 'device');
+            ->groupBy('device');
 
         return $this->similler_data($all_data_by_device);
     }
@@ -206,7 +210,7 @@ class AdminDashboardController extends Controller
         $all_data_by_country = VisitorInfo::select('country')
             ->whereDate('created_at', '>', Carbon::now()->subDays(30))
             ->get()
-            ->groupBy( 'country');
+            ->groupBy('country');
 
        return $this->similler_data($all_data_by_country);
     }
@@ -214,8 +218,9 @@ class AdminDashboardController extends Controller
     public function get_chart_data_os(Request $request){
         $all_data_by_os = VisitorInfo::select('os')
             ->whereDate('created_at', '>', Carbon::now()->subDays(30))
+            ->where('ip', '!=', '::1')
             ->get()
-            ->groupBy( 'os');
+            ->groupBy('os');
 
          return $this->similler_data($all_data_by_os);
     }
@@ -223,8 +228,9 @@ class AdminDashboardController extends Controller
     public function get_chart_data_browser(Request $request){
         $all_data_by_browser = VisitorInfo::select('browser')
             ->whereDate('created_at', '>', Carbon::now()->subDays(30))
+            ->where('ip', '!=', '::1')
             ->get()
-            ->groupBy( 'browser');
+            ->groupBy('browser');
 
         return $this->similler_data($all_data_by_browser);
     }

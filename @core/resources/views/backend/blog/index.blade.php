@@ -17,26 +17,26 @@
               <x-msg.success/>
               <x-msg.error/>
             </div>
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 mt-2">
                 <div class="card">
                     <div class="card-body">
 
                         <div class="header-wrap d-flex justify-content-between">
                             <div class="left-content">
-                                <h4 class="header-title">{{__('All Blog Items')}}   </h4>
+                                <!-- <h4 class="header-title">{{__('All Blog Items')}}   </h4> -->
                                 @can('blog-delete')
                                     <x-bulk-action/>
                                 @endcan
                             </div>
                             <div class="header-title d-flex">
-                                <div class="btn-wrapper-inner">
-                                    <form action="{{route('admin.blog')}}" method="get" id="langauge_change_select_get_form">
-                                        <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
-                                    </form>
+                                <div class="btn-wrapper-inner">                                    
                                     @can('blog-create')
                                          <a href="{{route('admin.blog.new')}}" class="btn btn-info"> {{__('Add New')}}</a>
                                          <a href="{{route('admin.blog.trashed')}}" class="btn btn-danger"> {{__('Trashed Blogs')}}</a>
                                      @endcan
+                                    <form action="{{route('admin.blog')}}" method="get" id="langauge_change_select_get_form">
+                                        <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
             <div class="col-lg-12">
                 <x-msg.success/>
                 <x-msg.error/>
-                <div class="card mt-4">
+                <div class="card mt-2">
                     <div class="card-body">
                         <div class="header-wrap d-flex justify-content-between">
                             <div class="btn-wrapper">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mt-5">
+            <div class="col-lg-6 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__("Edit Form")}}</h4>

@@ -26,7 +26,7 @@
                <x-msg.success/>
                <x-msg.error/>
             </div>
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <div class="header-wrap d-flex justify-content-between">

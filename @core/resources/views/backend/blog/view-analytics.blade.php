@@ -9,7 +9,7 @@
             <div class="col-lg-12">
                 <div class="margin-top-40"></div>
             </div>
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 mt-2">
                 <div class="card">
                     <div class="card-body">
 

@@ -11,7 +11,7 @@
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
             <!-- basic form start -->
-            <div class="col-12 mt-5">
+            <div class="col-12 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <a href="{{route('admin.all.frontend.user')}}" class="btn btn-info pull-right"> {{__('All User')}}</a>

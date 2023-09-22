@@ -16,7 +16,7 @@
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
-            <div class="col-lg-7 mt-5">
+            <div class="col-lg-7 mt-2">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__('All Newsletter Subscriber')}}</h4>
