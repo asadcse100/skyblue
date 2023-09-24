@@ -4,7 +4,7 @@
 namespace App\PageBuilder;
 
 
-use App\Models\PageBuilder;
+use App\PageBuilder;
 use Illuminate\Support\Facades\Cache;
 
 class PageBuilderSetup
