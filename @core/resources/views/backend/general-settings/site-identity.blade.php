@@ -16,10 +16,20 @@
                         <h4 class="header-title">{{__("Site Identity Settings")}}</h4>
                         <form action="{{route('admin.general.site.identity')}}" method="POST" enctype="multipart/form-data">
                           @csrf
-                            <x-image :title="__('Site Logo')" :name="'site_logo'" :dimentions="'160x50'"/>
-                            <x-image :title="__('Site White Logo')" :name="'site_white_logo'" :dimentions="'160x50'"/>
+                          <div class="row">
+                            <div class="col-lg-3">
+                                <x-image :title="__('Site Logo')" :name="'site_logo'" :dimentions="'160x50'"/>
+                            </div>
+                            <div class="col-lg-3">
+                                <x-image :title="__('Site White Logo')" :name="'site_white_logo'" :dimentions="'160x50'"/>
+                            </div>
+                            <div class="col-lg-3">
                             <x-image :title="__('Site Logo Two')" :name="'site_logo_two'" :dimentions="'160x50'"/>
+                            </div>
+                            <div class="col-lg-3">                            
                             <x-image :title="__('Favicon')" :name="'site_favicon'" :dimentions="'40x40'"/>
+                            </div>
+                          </div>
                             <button type="submit" id="update" class="btn btn-primary mt-4 pr-4 pl-4">{{__('Update Changes')}}</button>
                         </form>
                     </div>

@@ -9,8 +9,7 @@
 @section('content')
   <div class="col-lg-12 col-ml-12 padding-bottom-30">
        <div class="row">
-           <div class="col-lg-12">
-               <div class="margin-top-40"></div>
+       <div class="col-lg-12 margin-top-20">
                <x-msg.success/>
                <x-msg.error/>
            </div>
@@ -19,7 +18,7 @@
                    <div class="card-body">
                        <div class="header-wrap d-flex justify-content-between">
                            <div class="left-content">
-                               <h4 class="header-title">{{__('All Categories')}}  </h4>
+                               <!-- <h4 class="header-title">{{__('All Categories')}}  </h4> -->
                                @can('blog-category-delete')
                                <x-bulk-action/>
                                @endcan

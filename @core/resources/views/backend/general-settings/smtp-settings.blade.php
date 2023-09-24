@@ -9,7 +9,7 @@
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
-            <div class="col-7 mt-5">
+            <div class="col-7">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__("SMTP Settings")}}</h4>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5 mt-5">
+            <div class="col-5">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__("SMTP Test")}}</h4>

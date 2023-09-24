@@ -19,7 +19,7 @@
 @endsection
 
 @section('content')
-<div class="author-profile-area-wrapper" data-padding-top="100" data-padding-bottom="90">
+<div class="author-profile-area-wrapper" data-padding-top="20" data-padding-bottom="30">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

@@ -9,8 +9,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 @include('backend/partials/message')
                 @if($errors->any())
                     <div class="alert alert-danger">
@@ -23,10 +22,10 @@
                 @endif
             </div>
 
-            <div class="col-lg-7 mt-5">
+            <div class="col-lg-7">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">{{__('All Partner Items')}}</h4>
+                        <!-- <h4 class="header-title">{{__('All Partner Items')}}</h4> -->
                         @can('partner-delete')
                         <div class="bulk-delete-wrapper">
                             <div class="select-box-wrap">
@@ -106,7 +105,7 @@
             </div>
 
             @can('partner-create')
-            <div class="col-lg-5 mt-5">
+            <div class="col-lg-5">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__('Add New Client')}}</h4>

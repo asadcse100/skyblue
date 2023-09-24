@@ -12,12 +12,11 @@
 @section('content')
   <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
               <x-msg.success/>
               <x-msg.error/>
             </div>
-            <div class="col-lg-12 mt-2">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
 
@@ -31,8 +30,8 @@
                             <div class="header-title d-flex">
                                 <div class="btn-wrapper-inner">                                    
                                     @can('blog-create')
-                                         <a href="{{route('admin.blog.new')}}" class="btn btn-info"> {{__('Add New')}}</a>
-                                         <a href="{{route('admin.blog.trashed')}}" class="btn btn-danger"> {{__('Trashed Blogs')}}</a>
+                                         <a href="{{route('admin.blog.new')}}" class="btn btn-info m-1"> {{__('Add New')}}</a>
+                                         <a href="{{route('admin.blog.trashed')}}" class="btn btn-danger m-1"> {{__('Trashed Blogs')}}</a>
                                      @endcan
                                     <form action="{{route('admin.blog')}}" method="get" id="langauge_change_select_get_form">
                                         <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>

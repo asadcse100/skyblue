@@ -11,36 +11,35 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-msg.error/>
                 <x-msg.success/>
             </div>
 
-            <div class="col-lg-7 mt-5">
+            <div class="col-lg-7">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__('Faq Items')}}</h4>
                         @can('faq-delete')
-
-                            <div class="bulk-delete-wrapper">
+                            <!-- <div class="bulk-delete-wrapper"> -->
                                 <div class="select-box-wrap">
                                     <select name="bulk_option" id="bulk_option">
                                         <option value="">{{{__('Bulk Action')}}}</option>
                                         <option value="delete">{{{__('Delete')}}}</option>
                                     </select>
                                     <button class="btn btn-primary btn-sm" id="bulk_delete_btn">{{__('Apply')}}</button>
+                                    
+                                    <div class="header-title pull-right">
+                                        <div class="btn-wrapper-inner">
+                                            <form action="{{route('admin.faq')}}" method="get" id="langauge_change_select_get_form">
+                                                <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                         @endcan
 
-                        <div class="header-title pull-right">
-                            <div class="btn-wrapper-inner">
-                                <form action="{{route('admin.faq')}}" method="get" id="langauge_change_select_get_form">
-                                    <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
-                                </form>
-                            </div>
-                        </div>
 
                         <div class="table-wrap table-responsive">
                             <table class="table table-default">
@@ -108,7 +107,7 @@
             </div>
 
             @can('faq-create')
-                <div class="col-lg-5 mt-5">
+                <div class="col-lg-5">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="header-title">{{__('New Faq')}}</h4>

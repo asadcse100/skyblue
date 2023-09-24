@@ -71,7 +71,7 @@
 
 @section('content')
 
-<div class="blog-details-area-wrapper v-02" data-padding-top="88" data-padding-bottom="100">
+<div class="blog-details-area-wrapper v-02" data-padding-top="20" data-padding-bottom="30">
      <div class="header">
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>

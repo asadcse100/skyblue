@@ -1,4 +1,4 @@
-<div class="comment-area-full-wrapper" data-padding-top="40">
+<div class="comment-area-full-wrapper" data-padding-top="20">
     <!-- User comment area start -->
     <div class="user-comment-area" >
         <div class="comment-section-title section-title-style-03">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="custom-login" data-padding-top="50">
+    <div class="custom-login" data-padding-top="20">
         @if(!auth()->guard('web')->check())
             @include('frontend.partials.ajax-user-login-markup',['title' => get_static_option('blog_single_page_login_title_'.$user_select_lang_slug.'_text')])
         @endif

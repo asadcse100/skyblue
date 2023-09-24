@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-    <section class="blog-content-area padding-top-120 padding-bottom-25 ">
-        <div class="container margin-bottom-120">
+    <section class="blog-content-area padding-top-20 padding-bottom-30">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">

@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-12 mt-2">
+        <div class="col-lg-12 margin-top-20">
                 @include('backend.partials.message')
                 @include('backend.partials.error')
                 <div class="card">

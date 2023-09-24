@@ -29,9 +29,6 @@
             color: #0c0c0c;
         }
 
-
-
-
     </style>
 @endsection
 @section('site-title')
@@ -40,8 +37,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
@@ -50,14 +46,14 @@
                     <div class="card-body">
                         <div class="header-wrap d-flex justify-content-between">
                             <div class="left-content">
-                                <h4 class="header-title">{{__('Add New Page')}}   </h4>
+                                <h4 class="header-title">{{__('Add New Page')}}</h4>
                             </div>
                             <div class="header-title d-flex">
                                 <div class="btn-wrapper-inner">
                                     <form action="{{route('admin.page.new')}}" method="get" id="langauge_change_select_get_form">
                                         <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
                                     </form>
-                                    <a href="{{ route('admin.page') }}" class="btn btn-primary">{{__('All Pages')}}</a>
+                                    <!-- <a href="{{ route('admin.page') }}" class="btn btn-primary">{{__('All Pages')}}</a> -->
                                 </div>
                             </div>
                         </div>
@@ -65,10 +61,10 @@
                             @csrf
 
                             <input type="hidden" name="lang" value="{{$default_lang}}">
-                            <div class="tab-content margin-top-40">
+                            <div class="tab-content">
 
                                 <div class="form-group">
-                                    <label for="title">{{__('Title')}}</label>
+                                    <!-- <label for="title">{{__('Title')}}</label> -->
                                     <input type="text" class="form-control" name="title" placeholder="{{__('Title')}}" id="title">
                                 </div>
 

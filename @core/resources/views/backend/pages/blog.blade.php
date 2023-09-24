@@ -6,8 +6,7 @@
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
             <!-- basic form start -->
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+            <div class="col-lg-12 margin-top-20">
                 @include('backend/partials/message')
                 @include('backend/partials/error')
             </div>

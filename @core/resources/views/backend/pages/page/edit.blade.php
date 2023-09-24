@@ -38,8 +38,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
@@ -60,10 +59,10 @@
                             @csrf
 
                             <input type="hidden" name="lang" value="{{$default_lang}}">
-                            <div class="tab-content margin-top-40">
+                            <div class="tab-content">
 
                                 <div class="form-group">
-                                    <label for="title">{{__('Title')}}</label>
+                                    <!-- <label for="title">{{__('Title')}}</label> -->
                                     <input type="text" class="form-control" name="title" value="{{$page_post->getTranslation('title',$default_lang)}}" id="title">
                                 </div>
 
