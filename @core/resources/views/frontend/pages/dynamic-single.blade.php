@@ -23,7 +23,7 @@
         @elseif(auth()->guard('web')->check())
             @include('frontend.partials.pages-portion.dynamic-page-builder-part',['page_post' => $page_post])
         @else
-           <section class="padding-top-100 padding-bottom-100">
+           <section class="padding-top-20 padding-bottom-30">
                <div class="container">
                    <div class="row">
                        <div class="col-lg-12">
