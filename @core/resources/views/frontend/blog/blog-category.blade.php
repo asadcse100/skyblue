@@ -20,7 +20,7 @@
 
 @section('content')
 
-<div class="blog-area-wrapper Political-blog-grid-wrapper" data-padding-top="100" data-padding-bottom="100">
+<div class="blog-area-wrapper Political-blog-grid-wrapper" data-padding-top="20" data-padding-bottom="30">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -68,7 +68,7 @@
 
                         <!-- pagination area start -->
                         <div class="col-lg-12">
-                            <div class="pagination justify-content-center" data-padding-top="50">
+                            <div class="pagination justify-content-center" data-padding-top="20">
                                 <div class="pagination-wrapper ">
                                     {{$all_blogs->links()}}
                                 </div>

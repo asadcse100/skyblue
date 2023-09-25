@@ -13,8 +13,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+            <div class="col-lg-12 margin-top-20">
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
@@ -23,7 +22,7 @@
                     <div class="card-body">
                         <div class="header-wrap d-flex justify-content-between">
                             <div class="left-content">
-                                <h3 class="header-title">{{__('Add New Item')}}   </h3>
+                                <h3 class="header-title">{{__('Add New Item')}} </h3>
                             </div>
                             <div class="header-title d-flex">
                                 <div class="btn-wrapper-inner">
@@ -31,8 +30,8 @@
                                           id="langauge_change_select_get_form">
                                         <x-lang.select :name="'lang'" :selected="$default_lang" :id="'langchange'"/>
                                     </form>
-                                    <a href="{{ route('admin.blog') }}"
-                                       class="btn btn-primary">{{__('All Blog Post')}}</a>
+                                    <!-- <a href="{{ route('admin.blog') }}"
+                                       class="btn btn-primary">{{__('All Blog Post')}}</a> -->
                                 </div>
                             </div>
                         </div>
@@ -41,7 +40,7 @@
                             @csrf
                             <input type="hidden" name="lang" value="{{$default_lang}}">
                             <div class="form-group">
-                                <label for="title">{{__('Title')}}</label>
+                                <!-- <label for="title">{{__('Title')}}</label> -->
                                 <input type="text" class="form-control" name="title" id="title"
                                        placeholder="{{__('Title')}}">
                             </div>

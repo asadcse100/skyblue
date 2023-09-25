@@ -12,7 +12,7 @@
             <div class="col-12 mt-2">
                 <div class="card">
                     <div class="card-body">
-                        <div class="col-12 mt-5">
+                        <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
                                     @include('backend/partials/message')

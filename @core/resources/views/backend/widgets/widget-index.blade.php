@@ -9,12 +9,11 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-error-message/>
                 <x-flash-msg/>
             </div>
-            <div class="col-lg-6 mt-5">
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">{{__('All Widgets')}}</h4>
@@ -24,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mt-5">
+            <div class="col-lg-6">
                 <div class="sidebar-list-wrap">
                     {!! get_admin_sidebar_list() !!}
                 </div>

@@ -21,7 +21,7 @@
 @section('content')
 
 
-    <div class="blog-list-wrapper sports-blog-list-wrapper" data-padding-top="100" data-padding-bottom="100">
+    <div class="blog-list-wrapper sports-blog-list-wrapper" data-padding-top="20" data-padding-bottom="30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">

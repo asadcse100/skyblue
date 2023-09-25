@@ -1,4 +1,4 @@
-<div class="comment-area-full-wrapper" data-padding-top="40">
+<div class="comment-area-full-wrapper" data-padding-top="20">
     <!-- User comment area start -->
     <div class="user-comment-area" >
         <div class="comment-section-title section-title-style-02">
@@ -42,7 +42,7 @@
 
 
     @if(auth()->guard('web')->check())
-        <div class="comment-form-area" data-padding-top="70">
+        <div class="comment-form-area" data-padding-top="20">
             <div class="comment-section-title section-title-style-02">
                 <h3 class="title">{!! get_static_option('blog_single_page_comments_'.get_user_lang().'_title_text') !!}</h3>
             </div>

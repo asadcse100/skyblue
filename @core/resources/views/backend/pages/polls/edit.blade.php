@@ -6,8 +6,7 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
@@ -27,7 +26,7 @@
                         <form action="{{route('admin.poll.update',$poll->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
 
-                            <div class="tab-content margin-top-40">
+                            <div class="tab-content">
 
                                 <div class="form-group">
                                     <label for="title">{{__('Question')}}</label>

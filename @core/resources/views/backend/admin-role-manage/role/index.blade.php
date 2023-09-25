@@ -13,12 +13,12 @@
             <div class="col-12 mt-2">
                 <div class="card">
                     <div class="card-body">
-                        <div class="col-12 mt-5">
+                        <div class="col-12">
                             <x-msg.error/>
                             <x-msg.success/>
                             <div class="card">
                                 <div class="card-body">
-                                   <div class="header-wrap d-flex justify-content-between margin-bottom-40">
+                                   <div class="header-wrap d-flex justify-content-between margin-bottom-20">
                                        <h4 class="header-title">{{__('All Admin Roles')}}</h4>
                                        <div class="btn-wrapper">
                                            <a href="{{route('admin.role.new')}}" class="btn btn-primary">{{__("New Role")}}</a>

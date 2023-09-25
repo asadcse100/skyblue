@@ -1,5 +1,5 @@
 @if(count($all_related_blog) > 0)
-    <div class="related-post-area" data-padding-top="100">
+    <div class="related-post-area" data-padding-top="20">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title-style-03">

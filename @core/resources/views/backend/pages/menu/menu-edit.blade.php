@@ -8,12 +8,11 @@
 @section('content')
     <div class="col-lg-12 col-ml-12 padding-bottom-30">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="margin-top-40"></div>
+        <div class="col-lg-12 margin-top-20">
                 <x-msg.success/>
                 <x-msg.error/>
             </div>
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="header-wrapper d-flex justify-content-between">
