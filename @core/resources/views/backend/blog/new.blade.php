@@ -1,7 +1,7 @@
 @extends('backend.admin-master')
 @section('style')
     <x-summernote.css/>
-    
+
     <link rel="stylesheet" href="{{asset('assets/backend/css/bootstrap-tagsinput.css')}}">
 
     <x-media.css/>
@@ -394,9 +394,9 @@
     <x-summernote.js/>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
     <x-media.js/>
-    
+
     <script>
- 
+
         //Date Picker
         flatpickr('#tag_data', {
             enableTime: true,
@@ -533,8 +533,8 @@
                         $('.video_section').hide();
                     }
                 })
-                
-                
+
+
                 //Visibility Password Code
                 $(document).on('change', '#visibility', function (e) {
                    if( $(this).val() === 'password'){
