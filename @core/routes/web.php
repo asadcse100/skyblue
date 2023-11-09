@@ -9,6 +9,7 @@ Route::group(['prefix'=>'admin-home'],function() {
 
     Route::group(['prefix'=>'blog'],function() {
         Route::get('/', 'BlogController@index')->name('admin.blog');
+        Route::get('/laravel', 'BlogController@blog')->name('admin.blog.laravel');
         Route::get('/new', 'BlogController@new_blog')->name('admin.blog.new');
         Route::post('/new', 'BlogController@store_new_blog');
         Route::get('/get/tags','BlogController@get_tags_by_ajax')->name('admin.get.tags.by.ajax');
@@ -115,7 +116,6 @@ Route::group(['prefix' => $blog_page_slug,'namespace' => 'Frontend', 'middleware
     Route::post('blog/all/comment','BlogController@load_more_comments')->name('frontend.load.blog.comment.data');
 
 });
-
 
 
 /*----------------------------------------------------------------------------------------------------------------------------
@@ -249,4 +249,3 @@ Route::middleware(['setlang'])->group(function (){
 Route::group(['middleware' =>['setlang','globalVariable','maintains_mode','banned']],function () {
     Route::get('/{slug}', 'FrontendController@dynamic_single_page')->name('frontend.dynamic.page');
 });
-

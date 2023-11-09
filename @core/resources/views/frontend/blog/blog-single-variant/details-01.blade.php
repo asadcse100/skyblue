@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row">            
             @if($blog_post->visibility == 'public' )
             <div class="col-lg-8">
                 <div class="blog-details-inner-area">

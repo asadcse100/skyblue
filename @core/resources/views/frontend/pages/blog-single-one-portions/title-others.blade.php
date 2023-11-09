@@ -36,7 +36,7 @@
 </div>
 
 <div class="details-one-page-para">
-    <p class="info info-01">{!!   $blog_post->blog_content ?? '' !!} </p>
+    <p class="info info-01">{!! $blog_post->blog_content ?? '' !!} </p>
 </div>
 
 @php
@@ -64,7 +64,7 @@
             <div class="social-icon">
                 <ul class="social-link-list">
                     <li class="name">{{__('share :')}}</li>
-                     {!! single_post_share(route('frontend.blog.single',['id' => $blog_post->id, 'slug' => Str::slug($blog_post->title,'-')]),$blog_post->title,$blog_post->image) !!}
+                     {!! single_post_share(route('frontend.blog.single',['id' => $blog_post->id, 'slug' => Str::slug($blog_post->slug,'-')]),$blog_post->title,$blog_post->image) !!}
                 </ul>
             </div>
         </div>

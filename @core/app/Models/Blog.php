@@ -27,11 +27,8 @@ class Blog extends Model implements Feedable
     public $translatable  = ['title','blog_content','excerpt'];
     protected $dates = ['deleted_at'];
 
-
-
     public function toFeedItem(): FeedItem
     {
-
         return FeedItem::create([
             'id' => $this->id,
             'title' => $this->getTranslation('title',LanguageHelper::default_slug()),
@@ -46,7 +43,6 @@ class Blog extends Model implements Feedable
     {
         return Blog::where('status','publish')->orderBy('id','desc')->take(20)->get();
     }
-
 
     public function user(){
         return $this->belongsTo(User::class,'user_id');

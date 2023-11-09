@@ -44,6 +44,14 @@ class BlogController extends Controller
         $this->middleware('permission:blog-trashed-delete',['only' => ['delete_trashed_blog','trashed_bulk_action_blog']]);
     }
 
+    public function blog(Request $request)
+    {
+        $data = [];
+        $data['default_lang'] = $request->lang ?? LanguageHelper::default_slug();
+        $data['blog'] = Blog::usingLocale($data['default_lang'])->select('*')->orderBy('id','desc')->paginate(20);
+        return view(self::BASE_PATH.'blog.blog', $data);
+    }
+
     public function index(Request $request){
         $default_lang = $request->lang ?? LanguageHelper::default_slug();
 
@@ -87,7 +95,6 @@ class BlogController extends Controller
                 ->addColumn('date',function ($row){
                     return date_format($row->created_at,'d-M-Y');
                 })
-
 
                 ->addColumn('action', function($row)use($default_lang){
                     $action = '';

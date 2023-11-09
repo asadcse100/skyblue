@@ -70,7 +70,9 @@
                         <ul class="collapse">
                             @can('blog-list')
                             <li class="{{active_menu('admin-home/blog')}} @if(request()->is('admin-home/blog-edit/*')) active @endif"><a
-                                        href="{{route('admin.blog')}}">{{__('All Blogs')}}</a></li>
+                                        href="{{route('admin.blog')}}">{{__('All Blogs Ajax')}}</a></li>
+                            <li class="{{active_menu('admin-home/blog/laravel')}} @if(request()->is('admin-home/blog-edit/*')) active @endif"><a
+                                        href="{{route('admin.blog.laravel')}}">{{__('All Blogs')}}</a></li>
                             @endcan
 
                              @can('blog-category-list')

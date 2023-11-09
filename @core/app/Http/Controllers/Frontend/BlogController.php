@@ -30,9 +30,8 @@ class BlogController extends Controller
 
     public function blog_single($slug)
     {
-
         $blog_post = Blog::where(['slug'=> $slug,'status'=> 'publish'])->first();
-
+  
         if (empty($blog_post)) {
             abort(404);
         }
@@ -53,7 +52,7 @@ class BlogController extends Controller
         }
 
         $all_related_blog = Blog::with(['user', 'admin'])->whereJsonContains('category_id', $cat_id)->where('status','publish')->orderBy('id', 'desc')->take(2)->get();
-
+        
         if (is_null($blog_post->views)) {
             Blog::where('id', $blog_post->id)->update(['views' => 0]);
         } else {
@@ -61,13 +60,12 @@ class BlogController extends Controller
         }
 
         $blog_details_variant = get_static_option('blog_details_variant');
-
+        
         if(in_array($blog_details_variant,['01'])){
             $details_page = 'details-01';
         }else{
             $details_page = 'details-02';
-        }
-        
+        }    
         $totalWords = str_word_count(strip_tags($blog_post->blog_content));
         $minutesToRead = round($totalWords / 200);
         $read_duration = (int) max(1, $minutesToRead);
