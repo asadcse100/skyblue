@@ -48,7 +48,7 @@ class BlogController extends Controller
     {
         $data = [];
         $data['default_lang'] = $request->lang ?? LanguageHelper::default_slug();
-        $data['blog'] = Blog::usingLocale($data['default_lang'])->select('*')->orderBy('id','desc')->paginate(30);
+        $data['blog'] = Blog::usingLocale($data['default_lang'])->select('*')->orderBy('id','desc')->paginate(100);
         return view(self::BASE_PATH.'blog.blog', $data);
     }
 
