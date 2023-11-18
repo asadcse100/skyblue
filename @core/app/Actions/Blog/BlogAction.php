@@ -101,7 +101,7 @@ class BlogAction
         $blog_update->image = $request->image;
         $blog_update->image_gallery = $request->image_gallery;
         $blog_update->schedule_date = $request->schedule_date;
-        $blog_update->views = 0;
+        $blog_update->views = $request->views;
         $blog_update->video_url =$request->video_url;
         $blog_update->video_duration =$request->video_duration;
 

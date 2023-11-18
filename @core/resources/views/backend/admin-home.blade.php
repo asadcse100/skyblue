@@ -25,6 +25,7 @@ $statistics = [
 ['title' => 'Total Polls','value' => $all_poll, 'icon' => 'poll','data_url'=> $data_url['poll']],
 ['title' => 'Total Advertisement','value' => $total_advertisement, 'icon' => 'ad','data_url'=> $data_url['advertisement']],
 ['title' => 'Total Subscriber','value' => $total_subscriber, 'icon' => 'envelope-square','data_url'=> $data_url['subscriber']],
+['title' => 'Today Visitor','value' => $today_visitor],
 ['title' => 'Total Visitor','value' => $total_visitor],
 ];
 
@@ -36,7 +37,7 @@ $statistics = [
             <div class="row">
 
                 @foreach ($statistics as $data)
-                <div class="col-md-3 mt-5 mb-3">
+                <div class="col-md-3 mt-3 mb-3">
                     <div class="card card-hover">
                         <div class="dash-box text-white">
                             @if(!empty($data['icon']))
@@ -47,7 +48,9 @@ $statistics = [
                             <div class="dash-content">
                                 <h5 class="mb-0 mt-1">{{ $data['value'] }}</h5>
                                 <small class="font-light">{{ __($data['title']) }}</small>
+                                @if(!empty($data['data_url']))
                                 <a href="{{ $data['data_url'] ?? ''}}" class="text-white btn btn-info btn-sm ml-3 plus-btn"><i class="ti-plus"></i></a>
+                                @endif
                             </div>
                         </div>
                     </div>

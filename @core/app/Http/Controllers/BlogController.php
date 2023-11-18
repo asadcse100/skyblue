@@ -190,8 +190,6 @@ class BlogController extends Controller
 
     }
 
-
-
     public function delete_blog_all_lang(Request $request,BlogAction $action, $id){
         $action->delete_execute($request,$id,'delete');
         return redirect()->back()->with(FlashMsg::item_delete('Blog Post Deleted Successfully..'));
@@ -245,7 +243,6 @@ class BlogController extends Controller
             $msg .= ' '.__(',notification mail send');
         }
 
-
         return back()->with(['msg' => $msg, 'type' => 'success']);
     }
 
@@ -291,7 +288,6 @@ class BlogController extends Controller
         return response()->json(['status' => 'ok']);
     }
 
-
     public function blog_single_page_settings()
     {
         $all_languages = Language::all();
@@ -332,7 +328,6 @@ class BlogController extends Controller
         return redirect()->back()->with(FlashMsg::settings_update());
     }
 
-
     public function blog_others_page_settings()
     {
         return view(self::BASE_PATH.'blog.blog-others-settings');
@@ -369,7 +364,6 @@ class BlogController extends Controller
         return view(self::BASE_PATH.'blog.blog-details-page-variant');
     }
     
-
     public function update_details_variant(Request $request)
     {
         $request->validate( [
@@ -450,7 +444,7 @@ class BlogController extends Controller
         RssFeedInfo::whereIn('id',$request->ids)->delete();
         return response()->json(['status' => 'ok']);
     }
-
+    
     public function comment_approve($id)
     {
         $comment = BlogComment::find($id);
@@ -459,6 +453,4 @@ class BlogController extends Controller
 
         return redirect()->back()->with(FlashMsg::item_update('Comments Approved'));
     }
-
-
 }

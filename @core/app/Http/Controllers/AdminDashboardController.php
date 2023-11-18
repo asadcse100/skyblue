@@ -38,6 +38,7 @@ class AdminDashboardController extends Controller
         $all_poll = Poll::count();
         $total_advertisement = Advertisement::count();
         $total_subscriber = Newsletter::count();
+        $today_visitor = VisitorInfo::whereDate('created_at', Carbon::today())->where('ip', '!=', '::1')->count();
         $total_visitor = VisitorInfo::where('ip', '!=', '::1')->count();
 
 
@@ -59,6 +60,7 @@ class AdminDashboardController extends Controller
             'total_advertisement' => $total_advertisement,
             'total_subscriber' => $total_subscriber,
             'data_url'=> $data_url,
+            'today_visitor'=> $today_visitor,
             'total_visitor'=> $total_visitor,
         ]);
     }

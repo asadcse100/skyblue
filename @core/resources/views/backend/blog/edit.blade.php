@@ -39,6 +39,7 @@
                               id="blog_new_form">
                             @csrf
                             <input type="hidden" name="lang" value="{{$default_lang}}">
+                            <input type="hidden" name="views" value="{{$blog_post->views}}">
                             <div class="form-group">
                                 <label for="title">{{__('Title')}}</label>
                                 <input type="text" class="form-control" name="title" id="title"
@@ -289,8 +290,6 @@
 
                                         <div class="form-group " id="blog_tag_list">
                                             <label for="title">{{__('Blog Tag')}}</label>
-
-
                                                 @php
                                                     $tags_arr = json_decode($blog_post->tag_id);
                                                     $tags = is_array($tags_arr) ? implode(",", $tags_arr) : "";
@@ -403,8 +402,6 @@
                                             </div>
                                             <small class="form-text text-muted">{{__('allowed image format: jpg,jpeg,png')}}</small>
                                         </div>
-
-
                                         <div class="submit_btn mt-5">
                                             <button type="submit"
                                                     class="btn btn-success">{{__('Save Post ')}}</button>
