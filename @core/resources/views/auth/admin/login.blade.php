@@ -38,22 +38,6 @@
                             <div class="col-6 text-right">
                                 <a href="{{route('admin.forget.password')}}">{{__('Forgot Password?')}}</a>
                             </div>
-                            @if(preg_match('/(xgenious)/',url('/')))
-                            <div class="adminlogin-info">
-                                <table class="table-default">
-                                    <th>{{__('Username')}}</th>
-                                    <th>{{__('Password')}}</th>
-                                    <th>{{__('Action')}}</th>
-                                    <tbody>
-                                        <tr>
-                                            <td id="td_username">super_admin</td>
-                                            <td id="td_password">12345678</td>
-                                            <td><button type="button" class="autoLogin" id="autoLogin">{{__('Login')}}</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            @endif
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit">{{__('Login')}} <i class="ti-arrow-right"></i></button>

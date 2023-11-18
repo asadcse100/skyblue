@@ -2842,7 +2842,6 @@ function render_page_meta_data($blog_post){
        <meta  property="og:image" content="{$facebook_meta_image}" />
        
        <meta property="og:image" content="{$facebook_meta_image}" />
-<meta property="og:image:secure_url" content="https://xgenious.com/wp-content/uploads/2021/10/xgenious-logo-with-dark-profile-photo.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="1200" />
 <meta property="og:image:alt" content="{$meta_title}" />

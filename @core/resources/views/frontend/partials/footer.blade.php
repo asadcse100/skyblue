@@ -6,16 +6,6 @@
     <i class="las la-chevron-up"></i>
 </div>
 
-@if(preg_match('/(xgenious)/',url('/')))
-<div class="buy-now-wrap">
-    <ul class="buy-list">
-        <li><a target="_blank" href="https://bytesed.com/docs-category/intoday-new-magazine-php-laravel-scripts/" data-container="body" data-toggle="popover" data-placement="left" data-content="Documentation"><i class="las la-file-alt"></i></a></li>
-        <li><a target="_blank" href="https://codecanyon.net/checkout/from_item/35217402?license=regular&aid=byteseed&aso=xgenius-website&aca=purchase-btn-click"><i class="las la-shopping-cart"></i></a></li>
-        <li><a target="_blank" href="https://xgenious51.freshdesk.com/"><i class="las la-headset"></i></a></li>
-    </ul>
-</div>
-@endif
-
 <script src="{{asset('assets/frontend/js/popper.min.js')}}"></script>
 <script src="{{asset('assets/frontend/js/bootstrap.min-v4.6.0.js')}}"></script>
 <script src="{{asset('assets/frontend/js/dynamic-script.js')}}"></script>
