@@ -2,7 +2,7 @@
 <div class="supportbar-area-wrapper index-04">
     <div class="container custom-container-01">
         <div class="row">
-            <div class="col-lg-3 col-xl-2">
+            <div class="col-md-4 col-lg-3 col-xl-2">
                 <div class="logo-wrapper">
                     @if(get_static_option('site_frontend_dark_mode') == 'on')
                     <a href="{{url('/')}}">
@@ -15,7 +15,7 @@
                      @endif
                 </div>
             </div>
-            <div class="col-lg-9 col-xl-10">
+            <div class="col-md-8 col-lg-9 col-xl-10">
                 <div class="content">
                     <div class="support-bar-search-box style-02">
                         <form action="{{ route('frontend.blog.search') }}">

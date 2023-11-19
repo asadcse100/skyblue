@@ -10,8 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @include('feed::links')
 
-
-
     {!! render_favicon_by_id(get_static_option('site_favicon')) !!}
     {!! load_google_fonts() !!}
         <link rel="preload" href="{{asset('assets/frontend/fonts/la-brands-400.woff2')}}" as="font" type="font/woff2" crossorigin> 
@@ -20,7 +18,6 @@
        <link rel="stylesheet" href="{{asset('assets/frontend/css/compress.min.css')}}">
        <link rel="stylesheet" href="{{asset('assets/backend/css/flatpickr.min.css')}}">
        <link rel="stylesheet" href="{{asset('assets/frontend/css/dynamic-style.css')}}">
-
 
     {{-- Dark Mode--}}
     @if(get_static_option('site_frontend_dark_mode') === 'on')
@@ -39,10 +36,8 @@
         <script rel="preload" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{get_static_option('google_adsense_publisher_id')}}" crossorigin="anonymous"></script>
        @endif
 
-
     @include('frontend.partials.root-style')
     @yield('style')
-
 
       @if(request()->routeIs('homepage') || request()->is('/') )
         <title>{{get_static_option('site_'.$user_select_lang_slug.'_title')}} - {{get_static_option('site_'.$user_select_lang_slug.'_tag_line')}}</title>
@@ -56,8 +51,6 @@
             @yield('page-meta-data')
            <title> @yield('site-title') - {{get_static_option('site_'.$user_select_lang_slug.'_tag_line')}} </title>
         @endif
-
-
 </head>
 @php
     $class = '';
