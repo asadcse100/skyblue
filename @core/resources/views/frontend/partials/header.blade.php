@@ -49,7 +49,6 @@
 
         @else
             @yield('page-meta-data')
-           <title> @yield('site-title') - {{get_static_option('site_'.$user_select_lang_slug.'_tag_line')}} </title>
         @endif
 </head>
 @php
