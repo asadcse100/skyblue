@@ -25,9 +25,7 @@
                                     <i class="las la-search icon"></i>
                                 </button>
                             </div>
-
                                 @include('frontend.partials.pages-portion.navbars.autocomplete-markup')
-
                         </form>
                     </div>
                     <div class="add-box">
@@ -40,7 +38,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="nav-main-wrap-for-custom-style-01-v-02">
     <nav class="navbar navbar-area navbar-expand-lg has-topbar nav-style-01 custom-style-01 dark-bg-01 v-02">

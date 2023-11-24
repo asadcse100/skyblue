@@ -2833,7 +2833,7 @@ function render_page_meta_data($blog_post){
     return <<<HTML
        <meta name="meta_title" content="{$meta_title}" />
        <meta name="meta_tags" content="{$site_tags}" />
-       <meta name="meta_description" content="{$site_description}" />
+       <meta name="description" content="{$site_description}" />
        <!--Facebook-->
        <meta property="og:url" content="{$current_url}" />
        <meta property="og:type" content="{$facebook_meta_tags}" />
