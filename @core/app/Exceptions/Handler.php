@@ -52,10 +52,10 @@ class Handler extends ExceptionHandler
     {
         if ($this->isHttpException($exception)) {
             if ($exception->getStatusCode() == 404) {
-                return response()->view('frontend.pages.404');
+                return response()->view('frontend.pages.404', [], 404);
             }
             if ($exception->getStatusCode() == 500 ) {
-                return response()->view('frontend.pages.500');
+                return response()->view('frontend.pages.500', [], 404);
             }
         }
         return parent::render($request, $exception);
