@@ -2771,7 +2771,7 @@ function render_site_title($title){
     $site_title = get_static_option('site_'.GlobalLanguage::user_lang_slug().'_title');
     return <<<HTML
 
-    <title> {$title} - {$site_title} </title>
+    <title> {$title}</title>
 HTML;
 }
 
