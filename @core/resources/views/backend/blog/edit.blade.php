@@ -59,8 +59,12 @@
 
                             <div class="form-group">
                                 <label>{{__('Blog Content')}}</label>
-                                <input type="hidden" name="blog_content" value="{{$blog_post->getTranslation('blog_content',$default_lang)}}">
-                                <div class="summernote" data-content="{{$blog_post->getTranslation('blog_content',$default_lang)}}"></div>
+                                <!-- <input type="hidden" name="blog_content" value="{{$blog_post->getTranslation('blog_content',$default_lang)}}">
+                                <div class="summernote" data-content="{{$blog_post->getTranslation('blog_content',$default_lang)}}"></div> -->
+
+                                <textarea class="form-control form-control editor-ckeditor ays-ignore"
+                                        rows="4" data-counter="1000"
+                                        v-pre id="description" name="blog_content" cols="50">{!! $blog_post->getTranslation('blog_content',$default_lang) !!}</textarea>
                             </div>
 
                             <div class="form-group">
@@ -423,6 +427,8 @@
     <script src="{{asset('assets/backend/js/bootstrap-tagsinput.js')}}"></script>
     <x-summernote.js/>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    <script src="https://softravine.com/vendor/core/core/base/libraries/ckeditor/ckeditor.js?v=1.1.5"></script>
+<script src="https://softravine.com/vendor/core/core/base/js/editor.js?v=1.1.5"></script>
     <x-media.js/>
 
     <script>

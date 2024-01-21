@@ -1,7 +1,5 @@
 @extends('frontend.frontend-page-master')
 
-
-
 @section('custom-page-title')
     {!! __('All Blogs') !!}
 @endsection
